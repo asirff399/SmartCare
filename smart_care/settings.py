@@ -60,6 +60,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'smart_care.urls'
 
+CSRF_TRUSTED_ORIGINS = ['https://smartcare-xca3.onrender.com','https://*.127.0.0.1']
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
