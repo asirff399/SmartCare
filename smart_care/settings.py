@@ -62,7 +62,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'smart_care.urls'
 
-CSRF_TRUSTED_ORIGINS = ['https://smartcare-xca3.onrender.com','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://smartcare-x3l9.onrender.com','https://*.127.0.0.1']
 
 TEMPLATES = [
     {
