@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 # from decouple import config
+import dj_database_url
 import environ
 env = environ.Env()
 environ.Env.read_env()
@@ -85,11 +86,17 @@ WSGI_APPLICATION = 'smart_care.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        # Replace this value with your local database's connection string.
+        default='postgresql://smart_care_1gpt_user:nmPK1sKUC1I3h3OMweCJBgSVjUlAXit9@dpg-cqsasdqj1k6c73fjeirg-a.oregon-postgres.render.com/smart_care_1gpt',
+    )
 }
 
 REST_FRAMEWORK = {
